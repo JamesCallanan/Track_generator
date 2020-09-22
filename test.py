@@ -19,4 +19,6 @@ def main():
 			'trait': 'in the ufc'}
 	Output_File.write(applySwap(SwapKeys, 'template.txt') + '\n')
 	Output_File.write(applySwap(SwapKeys, 'template.txt'))
+	for N in range(5,10):
+		print(N)
 main()

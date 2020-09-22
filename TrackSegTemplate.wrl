@@ -9,7 +9,7 @@ DEF TrackSection{{segment_no}} Transform {
       }
     }
     geometry Box {
-      size {{segment_length}} 0.001 0.1
+      size {{segment_length}} 0.001 {{segment_width}}
     }
   }
 }
