@@ -19,10 +19,10 @@ def writePathSeg(Output_File,segment_no, rotation_angle,x_line_translation, y_li
 			'y_translation': y_line_translation,
 			'segment_length': segment_length,
 			'segment_width': segment_width}
-	Output_File.write(applySwap(LineKeyValPairs, 'TrackSegTemplate.wrl'))
+	Output_File.write(applySwap(LineKeyValPairs, r'C:\Users\james\Desktop\Summer 2020\track generator\TrackSegTemplate.wrl'))
 
 def main(): 
-	Output_File = open('C:\\Users\\james\\Desktop\\Summer 2020\\horizontal fix\\parrotMinidroneCompetition\\support\\asbQuadcopterWorld.wrl', 'w')
+	Output_File = open(r"C:\Users\james\Desktop\Summer 2020\UCDrone submission\parrotMinidroneCompetition1\support\asbQuadcopterWorld.wrl", 'w')
 	
 	min_no_segs = 5 
 	max_no_segs = 10
@@ -34,14 +34,14 @@ def main():
 
 	max_path_angle = 1.58 #assume no greater than 90 deg turns
 	#rel_angle #marks angle change between new track segemnt and prev track segment
-	start_x_pos = 0
-	start_y_pos = 0
+	start_x_pos = 57
+	start_y_pos = 95
 
 	radius = 0.1
 	circle_track_offset = 0.25
 
 	#Writing fixed base content to output file
-	Output_File.write(open('base.wrl','r').read()+'\n')
+	Output_File.write(open(r"C:\Users\james\Desktop\Summer 2020\track generator\Base.wrl",'r').read()+'\n')
 
 	cos_rot_angle = 0.0
 	sin_rot_angle = 0.0
@@ -92,6 +92,6 @@ def main():
 
 
 	#Writing circle object to file
-	Output_File.write(applySwap(CircleKeyValPairs, 'CircleTemplate.wrl'))
+	Output_File.write(applySwap(CircleKeyValPairs, r'C:\Users\james\Desktop\Summer 2020\track generator\CircleTemplate.wrl'))
 	Output_File.close()
 main()

@@ -10,7 +10,7 @@ DEF AHMap Transform {
   }
 }
 DEF QuadBody Transform {
-  translation 0 0 0
+  translation 65 0 97
   scaleOrientation 0 1 0 0
   children [
     DEF Airframe Transform {
