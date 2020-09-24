@@ -1,0 +1,29 @@
+Calling Python function to generate random track
+%system('py "C:/Users/james/Desktop/Summer 2020/track generator/track_gen.py"');
+%system('"C:/Python37/python.exe" "C:/Users/james/Desktop/Summer 2020/track generator/track_gen.py"');
+%C:/Python37/python.exe correct 64 bit 3.7 py
+%circle_coord = importdata('C:\Users\james\Desktop\Summer 2020\UCDrone submission\parrotMinidroneCompetition1\circle.txt')
+Opening project and running simulation
+%proj = slproject.loadProject('parrotMinidroneCompetition.prj')
+%simout = sim('mainModels/parrotMinidroneCompetition.slx')
+
+disp("new run")
+error = 0;
+n = 0;
+while (error<2)
+    n = n+1
+    system('py "C:/Users/james/Desktop/Summer 2020/track generator/track_gen.py"');
+    circle_coord = importdata('C:\Users\james\Desktop\Summer 2020\UCDrone submission\parrotMinidroneCompetition1\circle.txt');
+    try
+        disp(i)%doesnt wait till sim function crashes
+        simout = sim('mainModels/parrotMinidroneCompetition.slx')
+    catch
+        if (abs(simout.data(1) - circle_coord(1)) < 10 && abs(simout.data(3) - circle_coord(2)) < 10 && abs(simout.data(2)) < 0.1)
+            success = success + 1
+        else 
+            failure = failure + 1;
+            error = error + 1
+        end
+    end
+end
+disp("successes = " + success + ", failures = "+ failure)

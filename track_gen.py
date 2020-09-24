@@ -94,4 +94,11 @@ def main():
 	#Writing circle object to file
 	Output_File.write(applySwap(CircleKeyValPairs, r'C:\Users\james\Desktop\Summer 2020\track generator\CircleTemplate.wrl'))
 	Output_File.close()
+
+	circle_file = open(r"C:\Users\james\Desktop\Summer 2020\UCDrone submission\parrotMinidroneCompetition1\circle.txt", 'w')
+
+	f = open(r"C:\Users\james\Desktop\Summer 2020\UCDrone submission\parrotMinidroneCompetition1\circle.txt", 'w')
+	f.write(repr(x)+ ' ' + repr(y))
+	f.close()
+
 main()

@@ -1,0 +1,23 @@
+Python version details
+
+%pyenv('Version','C:\Python38\python.exe')
+pe = pyenv
+
+Executing file to gernerate track
+system('py track_gen.py');
+
+Loading and simulating project
+%proj = slproject.loadProject('C:\Users\james\Desktop\Summer 2020\horizontal fix\parrotMinidroneCompetition')
+%proj.reload %do i need to reload whole project
+sim('mainModels/parrotMinidroneCompetition.slx')
+
+C:/Users/james/Anaconda3/pkgs/python-3.7.4-h5263a28_0/python.exe setup.py install
+setx py3.7 "C:/Users/james/Anaconda3/pkgs/python-3.7.4-h5263a28_0/python.exe" /M
+
+I was watching a start up showcase recently where loads of teams were demonstrating their work, and even though the designs were really cool, way cooler than our algorithm, it got very boring after a few teams.b
+
+barry.cardiff@ucd.ie
+eainternships
+
+
+
